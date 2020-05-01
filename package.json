@@ -42,7 +42,9 @@
     "test": "cross-env NODE_ENV=test jest --runInBand",
     "test:flow": "flow check",
     "test:watch": "npm test -- --watch",
-    "test:cov": "npm run test -- --coverage"
+    "test:cov": "npm run test -- --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "react",
@@ -69,7 +71,8 @@
     "lodash-es": "^4.17.10",
     "prop-types": "^15.6.1",
     "react-is": "^16.4.1",
-    "react-lifecycles-compat": "^3.0.4"
+    "react-lifecycles-compat": "^3.0.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -164,5 +167,6 @@
         "*.js"
       ]
     }
-  ]
+  ],
+  "snyk": true
 }
